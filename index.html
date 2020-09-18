@@ -3,6 +3,46 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <script></script>
+        <script>
+            // Ask a user to pick R P or S
+            // Have the computer pick R P or S
+            
+            //Game plays for five rounds
+            function game() {
+                for (i = 0; i < 5; i++) {
+                    input = prompt('Pick Rock, Paper, or Scissors');
+                    console.log(playRound(input.toLowerCase(), computerPlay()))
+                }
+            }
+            
+            //Random pick from the computer
+            function computerPlay(){
+                let picks = ['rock', 'paper', 'scissors'];
+                return picks[Math.floor(Math.random() * picks.length)];
+            }
+
+            // Compare the two picks
+            // Output who has picked what
+            // Declare a winner
+            function playRound(playerSel, computerSel){
+                if (playerSel != 'rock' && playerSel != 'paper' && playerSel != 'scissors'){
+                    console.log('Please enter rock, paper, or scissors!');
+                }
+                else if(playerSel == computerSel){
+                    console.log('Same pick. A tie!');
+                }
+                else if ((playerSel == 'rock' && computerSel == 'paper')
+                || (playerSel == 'paper' && computerSel == 'scissors')
+                || (playerSel == 'scissors' && computerSel == 'rock'))
+                {
+                    console.log(`You lose! ${playerSel} beats ${computerSel}!`);
+                }
+                else {
+                    console.log(`You win! ${playerSel} beats ${computerSel}!`);
+                }
+            }
+
+            
+        </script>
     </body>
 </html>
