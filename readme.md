@@ -1,1 +1,1 @@
-This is a first version of rock paper scissors to practice javascript. 
+This is a second version of rock paper scissors to practice javascript, now with buttons, event listeners, and a reset button that works. Still looks pretty bad though, maybe later.  
